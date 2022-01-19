@@ -1,18 +1,20 @@
-import exp from "constants";
+import { ActionType } from "../action-types";
+
+ActionType
 
 interface DepositAction{
-    type:'deposit',
+    type:ActionType.DEPOSIT,
     payload: number
 
 }
 
 interface withdrawAction{
-    type:'withdraw',
+    type:ActionType.WITHDRAW,
     payload:number
 }
 
 interface BankruptAction{
-    type:'bankrupt'
+    type:ActionType.BANKRUPT
 }
 
 
