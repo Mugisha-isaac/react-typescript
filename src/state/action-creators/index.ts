@@ -21,11 +21,10 @@ export const withdrawMoney = (amount:number)=>{
 }
 
 
-export const bankruptFunc = (amount:number)=>{
+export const bankruptFunc = ()=>{
     return(dispatch:Dispatch<Action>)=>{
         dispatch({
             type:ActionType.BANKRUPT,
-            payload:amount
         })
     }
 }
