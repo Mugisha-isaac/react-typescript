@@ -9,3 +9,21 @@ export const depositMoney = (amount:DoubleRange) =>{
         })
     }
 }
+
+export const withdrawMoney = (amount:DoubleRange)=>{
+    return(dispatch:Dispatch)=>{
+        dispatch({
+            type:ActionType.WITHDRAW,
+            payload:amount
+        })
+    }
+}
+
+
+export const bankruptFunc = ()=>{
+    return(dispatch:Dispatch)=>{
+        dispatch({
+            type:ActionType.BANKRUPT
+        })
+    }
+}
