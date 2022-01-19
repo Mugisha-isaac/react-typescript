@@ -1,8 +1,9 @@
 import { ActionType } from "../action-types"
 import { Dispatch } from "redux"
+import {Action} from '../actions/index'
 
-export const depositMoney = (amount:DoubleRange) =>{
-    return (dispatch:Dispatch)=>{
+export const depositMoney = (amount:number) =>{
+    return (dispatch:Dispatch<Action>)=>{
         dispatch({
             type: ActionType.DEPOSIT,
             payload: amount
@@ -10,8 +11,8 @@ export const depositMoney = (amount:DoubleRange) =>{
     }
 }
 
-export const withdrawMoney = (amount:DoubleRange)=>{
-    return(dispatch:Dispatch)=>{
+export const withdrawMoney = (amount:number)=>{
+    return(dispatch:Dispatch<Action>)=>{
         dispatch({
             type:ActionType.WITHDRAW,
             payload:amount
@@ -20,10 +21,11 @@ export const withdrawMoney = (amount:DoubleRange)=>{
 }
 
 
-export const bankruptFunc = ()=>{
-    return(dispatch:Dispatch)=>{
+export const bankruptFunc = (amount:number)=>{
+    return(dispatch:Dispatch<Action>)=>{
         dispatch({
-            type:ActionType.BANKRUPT
+            type:ActionType.BANKRUPT,
+            payload:amount
         })
     }
 }
